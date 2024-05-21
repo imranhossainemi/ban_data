@@ -1,0 +1,20 @@
+<%= form_with(model: @abandon_data, url: abandon_data_path, method: :post) do |form| %>
+  <div class="field">
+    <%= form.label :Steam_ID %>
+    <%= form.number_field :Steam_ID %>
+  </div>
+
+   <div class="field">
+    <%= form.label :abandon_date %>
+    <%= form.date_field :abandon_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abandon_time %>
+    <%= form.time_field :abandontime %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>

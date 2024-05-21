@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @abandon_data %>
+
+<div>
+  <%= link_to "Edit this abandon data", edit_abandon_datum_path(@abandon_data) %> |
+  <%= link_to "Back to abandon data", abandon_data_path %>
+
+  <%= button_to "Destroy this abandon data", @abandon_data, method: :delete %>
+</div>

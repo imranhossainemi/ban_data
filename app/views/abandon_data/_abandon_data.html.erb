@@ -1,0 +1,22 @@
+<div id="<%= dom_id abandon_data %>">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Steam ID</th>
+                <th>Abandon Date</th>
+                <th>Abandon Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @abandon_data.each do |data| %>
+                <tr>
+                    <td><%= data.id %></td>
+                    <td><%= data.steam_id %></td>
+                    <td><%= data.abandon_date %></td>
+                    <td><%= data.abandon_time %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>

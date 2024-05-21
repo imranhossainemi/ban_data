@@ -1,0 +1,2 @@
+class AbandonData < ApplicationRecord
+end

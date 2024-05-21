@@ -1,0 +1,2 @@
+module AbandonDataHelper
+end
