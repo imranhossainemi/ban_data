@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @steam_id %>
+
+<div>
+  <%= link_to "Edit this steam", edit_steam_id_path(@steam_id) %> |
+  <%= link_to "Back to steams", steam_ids_path %>
+
+  <%= button_to "Destroy this steam", @steam_id, method: :delete %>
+</div>
