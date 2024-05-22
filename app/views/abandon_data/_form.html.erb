@@ -1,7 +1,7 @@
 <%= form_with(model: @abandon_data, url: abandon_data_path, method: :post) do |form| %>
   <div class="field">
-    <%= form.label :Steam_ID %>
-    <%= form.number_field :Steam_ID %>
+    <%= form.label :steam_id_id %>
+    <%= form.select :steam_id_id, options_for_select(@steam_nums) %>
   </div>
 
    <div class="field">
