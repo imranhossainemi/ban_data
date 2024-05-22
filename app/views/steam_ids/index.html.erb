@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Steams</h1>
+
+<div id="steam_ids">
+  <% @steam_ids.each do |steam_id| %>
+    <%= render steam_id %>
+    <p>
+      <%= link_to "Show this steam", steam_id %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New steam", new_steam_id_path %>
