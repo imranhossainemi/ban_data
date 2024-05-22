@@ -1,0 +1,2 @@
+module SteamIdsHelper
+end
