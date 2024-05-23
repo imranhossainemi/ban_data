@@ -25,7 +25,7 @@ class AbandonDataController < ApplicationController
 
     respond_to do |format|
       if @abandon_data.save
-        format.html { redirect_to abandon_data_url(@abandon_data), notice: "Abandon datum was successfully created." }
+        format.html { render :new , notice: "Abandon data was successfully created." }
         format.json { render :show, status: :created, location: @abandon_data }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -67,6 +67,6 @@ class AbandonDataController < ApplicationController
     def abandon_data_params
       params.fetch(:abandon_data, {})
     
-      params.require(:abandon_data).permit(:steam_id, :abandon_date, :abandon_time)
+      params.require(:abandon_data).permit( :abandon_date, :abandon_time, :steam_id_id)
     end
 end
