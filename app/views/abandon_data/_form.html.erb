@@ -1,10 +1,5 @@
 <%= form_with(model: @abandon_data, url: abandon_data_path, method: :post) do |form| %>
-  <div class="field">
-    <%= form.label :steam_id_id %>
-    <%= form.select :steam_id_id, SteamId.all.map{ 
-      |steam_id| [steam_id.steam_name, steam_id.id] 
-    }, {} %>
-  </div>
+
 
    <div class="field">
     <%= form.label :abandon_date %>
@@ -13,9 +8,15 @@
 
   <div class="field">
     <%= form.label :abandon_time %>
-    <%= form.time_field :abandontime %>
+    <%= form.time_field :abandon_time %>
   </div>
-
+  
+  <div class="field">
+    <%= form.label :steam_id_id %>
+    <%= form.select :steam_id_id, SteamId.all.map{ 
+      |steam_id| [steam_id.steam_name, steam_id.id] 
+    }, {} %>
+  </div>
   <div class="actions">
     <%= form.submit "Submit" %>
   </div>
