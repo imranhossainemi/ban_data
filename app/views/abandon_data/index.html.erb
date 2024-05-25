@@ -1,9 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<div class='container-fluid'>
+  <p style="color: green"><%= notice %></p>
 
-<h1>Abandon data</h1>
+  <h1>Abandon data</h1>
 
-<div id="abandon_data">
-  <%= render  'abandon_data'  %>
+  <%= link_to 'Add New data',  new_abandon_datum_path  %>
+
+  <div class='container' id="abandon_data">
+    <div class='row'>
+      <%= column_chart AbandonData.group_by_day_of_week(:abandon_date_time, format: "%a").count %>
+      <%= line_chart AbandonData.group_by_day(:abandon_date_time).count %>
+    </div>
+  </div>
+  <div class='container'>
+    <%= render  'abandon_data'  %>
+  </div>
 </div>
-
-<%= link_to 'Add New data',  new_abandon_datum_path  %>
