@@ -15,8 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_21_232025) do
   enable_extension "plpgsql"
 
   create_table "abandon_data", force: :cascade do |t|
-    t.date "abandon_date"
-    t.time "abandon_time"
+    t.datetime "abandon_date_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "steam_id_id", null: false
