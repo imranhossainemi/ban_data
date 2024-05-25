@@ -1,0 +1,21 @@
+<div class= 'col-md-4'>
+  <h2>Abandon '2024' Data</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Abandon Time</th>
+        <th>Abandon Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @abandon_data.each do |data| %>
+        <% if data.abandon_date.year == 2024 %>
+        <tr>
+          <td><%= data.abandon_time.strftime("%I:%M %p") %></td>
+          <td><%= data.abandon_date %></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
