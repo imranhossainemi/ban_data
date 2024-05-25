@@ -17,6 +17,9 @@ class AbandonDataController < ApplicationController
 
   # GET /abandon_data/1/edit
   def edit
+    abandon_data = AbandonData.find(params[:id])
+    abandon_data.update(abandon_date_time: Time.now)
+    redirect_to abandon_data_path
   end
 
   # POST /abandon_data or /abandon_data.json
@@ -67,6 +70,6 @@ class AbandonDataController < ApplicationController
     def abandon_data_params
       params.fetch(:abandon_data, {})
     
-      params.require(:abandon_data).permit( :abandon_date, :abandon_time, :steam_id_id)
+      params.require(:abandon_data).permit( :abandon_date_time, :steam_id_id)
     end
 end
