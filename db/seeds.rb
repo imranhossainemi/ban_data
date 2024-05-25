@@ -15,73 +15,59 @@ SteamId.create([
 
 AbandonData.create([
   { 
-    abandon_date: Date.parse('2024-05-19'),
-    abandon_time: Time.parse('11:27:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-05-19 11:27:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-05-18'),
-    abandon_time: Time.parse('09:45:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-05-18 09:45:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-05-15'),
-    abandon_time: Time.parse('08:46:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-05-15 08:46:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-05-10'),
-    abandon_time: Time.parse('05:19:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-05-10 05:19:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-05-08'),
-    abandon_time: Time.parse('12:34:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-05-08 12:34:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-05-01'),
-    abandon_time: Time.parse('08:41:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-05-01 08:41:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-04-29'),
-    abandon_time: Time.parse('05:04:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-04-29 05:04:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-04-24'),
-    abandon_time: Time.parse('04:41:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-04-24 04:41:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-04-22'),
-    abandon_time: Time.parse('08:05:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-04-22 08:05:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-04-19'),
-    abandon_time: Time.parse('11:42:00 am').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-04-19 11:42:00 am').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-04-16'),
-    abandon_time: Time.parse('02:53:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-04-16 02:53:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-04-15'),
-    abandon_time: Time.parse('07:25:00 am').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-04-15 07:25:00 am').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-04-06'),
-    abandon_time: Time.parse('01:38:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-04-06 01:38:00 pm').in_time_zone,
     steam_id_id: 1 
   },
   { 
-    abandon_date: Date.parse('2024-04-02'),
-    abandon_time: Time.parse('08:12:00 pm').in_time_zone,
+    abandon_date_time: DateTime.parse('2024-04-02 08:12:00 pm').in_time_zone,
     steam_id_id: 1 
   },
 ])
