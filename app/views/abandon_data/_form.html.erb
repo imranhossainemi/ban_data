@@ -1,14 +1,8 @@
 <%= form_with(model: @abandon_data, url: abandon_data_path, method: :post) do |form| %>
 
-
-   <div class="field">
-    <%= form.label :abandon_date %>
-    <%= form.date_field :abandon_date %>
-  </div>
-
   <div class="field">
-    <%= form.label :abandon_time %>
-    <%= form.time_field :abandon_time %>
+    <%= form.label :abandon_date_time %>
+    <%= form.datetime_field :abandon_date_time %>
   </div>
   
   <div class="field">
