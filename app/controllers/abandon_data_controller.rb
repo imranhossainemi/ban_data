@@ -4,6 +4,18 @@ class AbandonDataController < ApplicationController
   # GET /abandon_data or /abandon_data.json
   def index
     @abandon_data = AbandonData.all
+    
+    @abandon_counts_by_hour = AbandonData.group_by_hour_of_day(:abandon_date_time).count
+
+    # Find the maximum count
+    @max_abandon_count = @abandon_counts_by_hour.values.max
+
+    # Get the current hour
+    @current_hour = Time.now.hour
+
+    # Calculate the abandon rate for the current hour
+    @current_abandon_count = @abandon_counts_by_hour[@current_hour] || 0
+    @abandon_rate = (@current_abandon_count * 100.0) / @max_abandon_count
   end
 
   # GET /abandon_data/1 or /abandon_data/1.json
