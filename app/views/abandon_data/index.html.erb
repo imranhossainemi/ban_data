@@ -7,8 +7,15 @@
 
   <div class='container' id="abandon_data">
     <div class='row'>
-      <%= column_chart AbandonData.group_by_day_of_week(:abandon_date_time, format: "%a").count %>
-      <%= line_chart AbandonData.group_by_day(:abandon_date_time).count %>
+      <div class='col-md-12 my-5'>
+        <%= column_chart AbandonData.group_by_day_of_week(:abandon_date_time, format: "%a").count %>
+      </div>
+      <div class='col-md-12 my-5'>
+        <%= line_chart AbandonData.group_by_day(:abandon_date_time).count %>
+      </div>
+      <div class='col-md-12 my-5'>
+        <%= pie_chart AbandonData.group(:steam_id_id).count %>
+      </div>
     </div>
   </div>
   <div class='container'>
