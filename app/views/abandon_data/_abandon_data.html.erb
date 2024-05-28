@@ -6,6 +6,8 @@
                 <th>Steam ID</th>
                 <th>Abandon Date</th>
                 <th>Abandon Time</th>
+                <th>Edit</th>
+                <th>Destroy</th>
             </tr>
         </thead>
         <tbody>
@@ -15,8 +17,12 @@
                     <td><%= data.steam_id_id %></td>
                     <td><%= data.abandon_date_time.strftime("%Y-%m-%d") %></td>
                     <td><%= data.abandon_date_time.strftime("%I:%M %p") %></td>
-                    <td><%= link_to 'Edit', edit_abandon_datum_path(data) %></td>
-                    <td><%= link_to 'Destroy', abandon_datum_path(data), method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <td>
+                        <%= link_to "Edit", edit_abandon_datum_path(data) %>
+                    </td>
+                    <td>
+                        <%= link_to "Destroy", abandon_datum_path(data), method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </td>
                 </tr>
                 </tr>
             <% end %>
