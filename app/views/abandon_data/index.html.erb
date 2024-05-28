@@ -5,6 +5,10 @@
 
   <%= link_to 'Add New data',  new_abandon_datum_path  %>
 
+  <div class='col-md-12 my-5'>
+    <h2> Current Hour: <%= @current_hour %> Abandon Rate: <%= @abandon_rate %>% </h2>
+  </div>
+
   <div class='container' id="abandon_data">
     <div class='row'>
       <div class='col-md-12 my-5'>
@@ -17,9 +21,11 @@
         <%= pie_chart AbandonData.group(:steam_id_id).count %>
       </div>
       <div class='col-md-12 my-5'>
+        <h3 class='text-center'> Abandon Rate by Hour </h3>
         <%= bar_chart AbandonData.group_by_hour_of_day(:abandon_date_time).count %>
       </div>
       <div class='col-md-12 my-5'>
+        <h3 class='text-center'> Abandon Rate by Month </h3>
         <%= area_chart AbandonData.group_by_month(:abandon_date_time).count %>
       </div>
       <div class='col-md-12 my-5'>
@@ -31,9 +37,12 @@
       <div class='col-md-12 my-5'>
         <%= line_chart AbandonData.group_by_day_of_week(:abandon_date_time).count %>
       </div>
+      <div class='col-md-12 my-5'>
+        <%= column_chart AbandonData.group_by_year(:abandon_date_time).count %>
+      </div>
     </div>
   </div>
   <div class='container'>
     <%= render  'abandon_data'  %>
   </div>
-</div>
+</>
