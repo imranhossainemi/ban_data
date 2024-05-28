@@ -16,6 +16,9 @@
       <div class='col-md-12 my-5'>
         <%= pie_chart AbandonData.group(:steam_id_id).count %>
       </div>
+      <div class='col-md-12 my-5'>
+        <%= bar_chart AbandonData.group_by_hour_of_day(:abandon_date_time).count %>
+      </div>
     </div>
   </div>
   <div class='container'>
