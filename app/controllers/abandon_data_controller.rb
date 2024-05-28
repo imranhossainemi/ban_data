@@ -18,8 +18,8 @@ class AbandonDataController < ApplicationController
   # GET /abandon_data/1/edit
   def edit
     abandon_data = AbandonData.find(params[:id])
-    abandon_data.update(abandon_date_time: Time.now)
-    redirect_to abandon_data_path
+    abandon_data.update(abandon_date_time: DateTime.now)
+    # redirect_to abandon_data_path
   end
 
   # POST /abandon_data or /abandon_data.json
@@ -52,12 +52,8 @@ class AbandonDataController < ApplicationController
 
   # DELETE /abandon_data/1 or /abandon_data/1.json
   def destroy
-    @abandon_data.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to abandon_data_url, notice: "Abandon datum was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    @abandon_data.destroy
+    redirect_to abandon_data_path
   end
 
   private
