@@ -9,10 +9,10 @@
     </thead>
     <tbody>
       <% @abandon_data_order_by_time.each do |data| %>
-        <% if data.respond_to?(:abandon_time) &&  data.abandon_time.strftime("%p") == "PM" && data.abandon_date.year == 2024 %>
+        <% if data.respond_to?(:abandon_date_time) &&  data.abandon_date_time.strftime("%p") == "PM" && data.abandon_date_time.strftime('%Y') == '2024' %>
         <tr>
-          <td><%= data.abandon_time.strftime("%I:%M %p") %></td>
-          <td><%= data.abandon_date %></td>
+          <td><%= data.abandon_date_time.strftime("%I:%M %p") %></td>
+          <td><%= data.abandon_date_time.strftime("%Y-%m-%d") %></td>
         </tr>
         <% end %>
       <% end %>
