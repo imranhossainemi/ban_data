@@ -16,6 +16,8 @@ class AbandonDataController < ApplicationController
     # Calculate the abandon rate for the current hour
     @current_abandon_count = @abandon_counts_by_hour[@current_hour] || 0
     @abandon_rate = (@current_abandon_count * 100.0) / @max_abandon_count
+
+    @abandon_data_order_by_time = AbandonData.order(abandon_date_time: :desc)
   end
 
   # GET /abandon_data/1 or /abandon_data/1.json
